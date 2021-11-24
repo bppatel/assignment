@@ -1,0 +1,7 @@
+---
+# vars file for elasticsearch
+
+LOG_PATH : /opt/elasticsearch/logs
+DATA_PATH : /opt/elasticsearch/data
+CLUSTER_NAME : Test_elasticsearch
+MIN_MASTER_NODES : 1

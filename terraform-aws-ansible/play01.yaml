@@ -1,0 +1,17 @@
+---
+  - name: Node Exporter Configuration
+    hosts: terra_ansible_host
+    become: yes
+    roles:
+      - { role: packages }
+      - { role: elasticsearch }
+    vars:
+    - JVM_MIN : 50M
+    - JVM_MAX : 100M
+    handlers:
+    - name: restart-elasticsearch
+      service:
+        name: elasticsearch
+        state: restarted
+
+
